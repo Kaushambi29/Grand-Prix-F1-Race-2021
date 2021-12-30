@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grandPrixF1Race2021</title>
+</head>
+<body>
+   
+    var readlineSync = require('readline-sync')
+
+
+
+var score = 0
+// const chalk = require('chalk')
+
+
+
+function play(question, answer) {
+  var userAnswer = readlineSync.question(question)
+
+  if (userAnswer === answer) {
+    console.log('You are right!')
+
+
+    score = score + 1
+
+  } else {
+
+    console.log('you are wrong!')
+    score = score - 1
+  }
+
+  console.log('current score', score)
+
+}
+
+var question = [{
+
+  question: 'Who won the Formula1 grand prix 2021?',
+  answer: 'Max Verstappen'
+
+}, {
+
+  question: 'Which sports car was Max driving?',
+  answer: 'Red Bull Racing Honda'
+
+}, {
+
+  question: 'Who was the other driver of Red Bull Racing Honda?',
+  answer: 'Sergio Perez'
+
+}, {
+
+  question: 'How many laps were there in Formula 1 STC Saudi Arabian Grand Prix 2021?',
+  answer: '50'
+
+}, {
+
+  question: 'Who was giving the toughest competetion to Max?',
+  answer: 'Lewis Hamilton'
+
+}, {
+
+  question: 'Lewis Hamilton was the driver of which car?',
+  answer: 'Mercedes'
+
+
+}]
+
+for (var i = 0; i < question.length; i++) {
+  var currentQuestion = question[i]
+  play(currentQuestion.question, currentQuestion.answer)
+}
+
+
+console.log('Total score', score)
+
+
+    
+
+
+</body>
+</html>
